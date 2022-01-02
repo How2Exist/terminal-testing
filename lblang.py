@@ -170,6 +170,9 @@ class Tokenizer:
                             num = ""
 
                             for char2 in curToken.value:
+                                if (not IsNumber(char2))
+                                    break
+                                
                                 num += char2
                             
                             t = Token(int(num), TokenType.LITERAL_NUMBER)
@@ -241,4 +244,6 @@ def runCode(file):
     # debug
     for token in tokens:
         print(f"[{token.value}]", end = "")
+        
+    print("\n")
     
